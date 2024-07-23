@@ -96,7 +96,7 @@ if ($nobuild -ne $true) {
 if ($zip -eq $true) {
     $zipOut = $o + ".zip"
     echo "Zipping project to $zipOut..."
-    Compress-Archive -Path $o -DestinationPath $zipOut
+    Compress-Archive -Path $o -DestinationPath $zipOut -Force -CompressionLevel Optimal
 }
 
 if ($run -eq $true) {
